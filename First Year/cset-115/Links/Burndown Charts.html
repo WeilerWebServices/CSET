@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burndown Charts</title>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="oqVLrBdOTfh+C7lf2TDQ1gJOTWmPRhSIpejZ/t2zL3M=" name="csrf-token" />
+
+  <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+  <!-- Le styles -->
+  <link href="/assets/application-5b6aeafe557e74c01ef9341d23e2c619.css" media="all" rel="stylesheet" />
+  <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" media="all" rel="stylesheet" />
+
+  <!-- Le fav and touch icons -->
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+
+  
+
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39573511-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  </script>
+
+</head>
+
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+      <div class="container-fluid header">
+
+        <div id="topnavlogo">
+          <a id="Home" href="/"><img src="/assets/site/topnavlogo.png" style="opacity:1.0"></a>
+          <a href="/way_of_the_web_tester"><img src="/assets/misc/small-banner.png" style="opacity:1.0"></a>
+          <a href="/about"><img class="pull-right" src="/assets/misc/agile-samurai-figure.png" style="padding-top: 10px; width: 100px; opacity:1.0"></a>
+        </div>
+
+        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+
+        <div class="brand">
+          <a href="/">Getting Started</a>
+          <a href="/videos">Videos</a>
+          <a href="/bootcamp">Courses</a>
+        </div>
+
+        <ul class="nav" role="navigation">
+            <li class="dropdown">
+              <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Learn More <b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="/agile_books">Books</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="/scrum">Scrum</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="/xp">XP</a></li>
+              </ul>
+            </li>
+        </ul>
+
+        <div class="nav-collapse">
+
+  <ul class="nav pull-right">
+    <li><a href="/about">About</a></li>
+    <li><a href="/feedback">Feedback</a></li>
+    <li><a href="/newsletter">Newsletter</a></li>
+    <li><a href="http://agilewarrior.wordpress.com">Blog</a></li>
+        <!--<li><a href="/signin">Sign in</a></li>-->
+
+  </ul>
+
+</div><!--/.nav-collapse -->
+
+
+
+      </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+
+
+      
+<div class="container" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+     xmlns="http://www.w3.org/1999/html">
+
+  <div class="row-fluid">
+    <div class="span9">
+      <div class="content">
+        <h1>Burndown Charts</h1>
+
+        <img class="centered" src="http://agilewarrior.files.wordpress.com/2013/06/how-quickly-burn-through-stories.png?w=540" alt="agile burndown chart"/>
+
+
+        <p>The burndown is a chart that shows how quickly you and your team are burning through your customer's
+          <a href="/user_stories">user stories</a>. It shows the total effort against the amount of work we
+          deliver each iteration. Something like this:
+        </p>
+
+        <img class="centered" src="http://agilewarrior.files.wordpress.com/2013/06/burndown-3-details.png?w=540" alt="agile burndown chart"/>
+
+        <p>We can see the total effort on the left, our team velocity on the right. But look what else this simple
+          graphs gives us.</p>
+
+        <ul>
+          <li>Work done each iteration</li>
+          <li>Work remaining</li>
+          <li>Work done so far</li>
+          <li>When we can expect to be done</li>
+        </ul>
+
+        <p>All this from one graph!</p>
+
+        <p>Now what you see above is pretty ideal. A more realistic burndown looks something more like this:</p>
+
+        <img class="centered" src="http://agilewarrior.files.wordpress.com/2013/06/burndown-4-realistic.png?w=540" alt="agile burndown chart"/>
+
+        <p>It’s never a straight line. The team never moves at exactly one fixed velocity. And we discover things
+          along the way (notice how it shows us scope creep in the form of those 5 new reports).
+        </p>
+
+        <p>And of course like all things in Agile, you are free to make things your own. One tweak I like making to the
+          burndown is displaying total work done each iteration also. This let’s me look at the chart, and immediately
+          get a sense of whether we are a quarter, a third, or ½ way done the project.
+        </p>
+
+        <img class="centered" src="http://agilewarrior.files.wordpress.com/2013/06/burndown-5-workcomplete.png?w=540" alt="agile burndown chart"/>
+
+        <p></p>
+
+        <div class="alert alert-info">
+          <strong>Burndowns are great because they:</strong><br/>
+          <ul>
+            <li>Make the reality of the project clear.</li>
+            <li>Show the impact of decisions.</li>
+            <li>Warn you early if things aren't going according to plan.</li>
+            <li>Get rid of all the wishful thinking around dates.</li>
+          </ul>
+        </div>
+
+        <p>If you are looking for some burndown charts to get you started, here are the ones I use:</p>
+        <ul>
+          <li><a href="/assets/Sample-Burndown.xls" target="_blank">Excel</a></li>
+          <li>
+            <a href="https://docs.google.com/spreadsheet/ccc?key=0Au-Cy1knbSl6dDg3T09EMzlFbXpWSDZxcmdsUnBJZXc&usp=sharing" target="_blank">GoogleDocs</a>
+          </li>
+        </ul>
+
+        <p>You can also watch a short video on burndowns in our episodes section
+          <a href="http://www.agilenutshell.com/episodes/6-burndown-charts">here</a>.</p>
+
+        <br/>
+
+            <ul class="pager">
+      <li class="next">
+        <a href="http://www.agilenutshell.com/user_stories">Back &rarr;</a>
+      </li>
+    </ul>
+
+
+      </div>
+    </div>
+    <!--/span-->
+
+    <div class="span3">
+  <div class="well">
+    <ul class="nav nav-list">
+      <li class="nav-header">In a nutshell</li>
+      <li><a href="/what_is_agile">What is Agile?</a></li>
+      <li><a href="/how_does_it_work">How does it work?</a></li>
+      <li><a href="/how_is_it_different">How is it different?</a></li>
+      <li><a href="/agile_myths">Agile Myths</a></li>
+      <li><a href="/agile_vs_waterfall">Agile vs Waterfall</a></li>
+      <li class="nav-header">Fundamentals</li>
+      <li><a href="/user_stories">User Stories</a></li>
+      <li><a href="/estimation">Estimation</a></li>
+      <li><a href="/iterations">Iterations</a></li>
+      <li><a href="/planning">Planning</a></li>
+      <li class="nav-header">Engineering</li>
+      <li><a href="/unit_testing">Unit Testing</a></li>
+      <li><a href="/refactoring">Refactoring</a></li>
+      <li><a href="/continuous_integration">Continuous Integration</a></li>
+      <li><a href="/test_driven_development">Test Driven Development</a></li>
+      <li class="nav-header">Concepts</li>
+      <li><a href="/burndown">Burndown Charts</a></li>
+      <li><a href="/cone_of_uncertainty">Cone of Uncertainty</a></li>
+      <li><a href="/management_by_miracle">Management by Miracle</a></li>
+      <li><a href="/three_simple_truths">Three Simple Truths</a></li>
+      <li class="nav-header">XPisms</li>
+      <li><a href="/bill_of_rights">Bill of Rights</a></li>
+      <li><a href="/yagni">YAGNI</a></li>
+      <li><a href="/yesterdays_weather">Yesterday&#39;s Weather</a></li>
+      <li><a href="/simplest_thing">The Simplest Thing</a></li>
+      <li><a href="/could_possibly_break">Testing</a></li>
+      <li><a href="/production_readiness">Production Readiness</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+</div>
+
+
+
+      <footer class="footer">
+  &nbsp;
+  <div class="inner">
+      &copy; Jonathan Rasmusson - <a href="/privacy">Privacy Policy</a>
+  </div>
+
+</footer>
+
+
+      
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/application-5895e634304da4502e0b87a34ac25921.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+    <script>
+      $(function(){
+        prettyPrint();
+      });
+    </script>
+
+    <!-- Le Google Analytics -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34862727-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+  </body>
+</html>

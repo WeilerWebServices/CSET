@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../slides.css"/>
+
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+# Report Generation
+
+---
+## Report Generation
+
+* Generating Reports goes hand in hand with the data analysis pipeline that we already discussed.
+* Can be considered part of the "automation / computation" step
+* You could also just be asked to generate reports outside of the data analysis lifecycle.
+---
+## Common reports you may see:
+* Sales Reports
+* Efficiency Reports
+* Time Tracking
+* Sprint Burndown
+* etc...
+---
+## Report Dashboards
+Web page featuring a collection of multiple reports
+<br/>Elastic
+.center[![Center-aligned image](https://www.elastic.co/guide/en/kibana/current/images/tutorial-sample-dashboard.png)]
+---
+<h2 class="longheader">Dashboard examples: server logs</h2>
+.center[![Center-aligned image](https://newrelic.com/content/dam/component-assets/homepage/hp01/hp01-screenshot1.jpg)]
+---
+<h2 class="longheader">Dashboard examples: analytics</h2>
+.center[![Center-aligned image](https://cdn-images-1.medium.com/max/2000/1*pVhLMfxXmHTtHPCh1_ac_Q.png)]
+---
+## Dashboard examples: sales
+.center.image-large[![Center-aligned image](https://s3.envato.com/files/174109723/07_AdminDashboard.jpg)]
+---
+## Lets build a dashboard.
+* I own a used car dealership.
+* Team of 10 salespeople.
+* Monthly sales data.
+
+### Visualizations Needed:
+* number of cars sold (number)
+* total profit (number)(base price + accessories - taxes)
+* sales person rankings (table)(sort by $$ sold, include # sold, revenue brought in, total commissions)
+* car manufacturer rankings (chart) (# sold)
+* top 10 cars sold (chart) (# of same make/model sold)
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

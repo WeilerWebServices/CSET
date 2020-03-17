@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>    
+    <title>&ldquo;How to Scope Work,&rdquo; an article by Dan Mall</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho -->
+    	<meta name="viewport" content="width=device-width" />
+
+    <!-- RSS Feeds -->
+	<link rel="alternate" type="application/rss+xml" title="Dan Mall&rsquo;s RSS Feed" href="http://danmall.me/rss/" />
+    <link rel="alternate" type="application/rss+xml" title="Dan Mall&rsquo;s RSS Feed (Full Posts)" href="http://danmall.me/rss/full.xml" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+ 
+    <!-- http://particletree.com/notebook/automatically-version-your-css-and-javascript-files/ -->
+        <style type="text/css">.dm-u-text--xs{font-size:8px;font-size:.8rem}.dm-u-text--s{font-size:16px;font-size:1.6rem}.dm-u-text--m{font-size:24px;font-size:2.4rem}.dm-u-text--l{font-size:32px;font-size:3.2rem}.dm-u-text--xl{font-size:40px;font-size:4rem}.dm-u-text--xxl{font-size:48px;font-size:4.8rem}.dm-u-text--10{font-size:10px;font-size:1rem}.dm-u-text--12{font-size:12px;font-size:1.2rem}.dm-u-text--14{font-size:14px;font-size:1.4rem}.dm-u-text--20{font-size:20px;font-size:2rem}.dm-u-leading--xs{line-height:1}.dm-u-leading--s{line-height:1.2}.dm-u-leading--m{line-height:1.4}.dm-u-leading--l{line-height:1.6}.dm-u-leading--xl{line-height:1.8}.dm-u-leading--xxl{line-height:2}.dm-u-font--sans{font-family:Helvetica,Arial,sans-serif;font-family:"Firme-Book",Helvetica,Arial,sans-serif}.dm-u-font--serif{font-family:Georgia,"Times New Roman",serif;font-family:"BreveNews-Book",Georgia,"Times New Roman",serif}.dm-u-font--normal{font-weight:normal}.dm-u-font--bold{font-weight:bold}.breveNewsBold-loaded .dm-u-font--bold{font-weight:normal;font-family:"BreveNews-Bold"}.dm-u-font--italic,.dm-u-fontStyle--italic{font-style:italic}.breveNewsBookItalic-loaded .dm-u-font--italic,.breveNewsBookItalic-loaded .dm-u-fontStyle--italic{font-style:normal;font-family:"BreveNews-BookItalic"}.dm-u-fontStyle--normal{font-style:normal}.dm-u-bullets{list-style:disc}.dm-u-bullets--none{list-style:none}.dm-u-uppercase{text-transform:uppercase;letter-spacing:0.1em}.dm-u-letterspace--in{letter-spacing:-1px}.dm-u-align--left{text-align:left}.dm-u-align--right{text-align:right}.dm-u-align--center{text-align:center}.dm-u-margin--0{margin:0}.dm-u-margin--xs{margin:8px}.dm-u-margin--s{margin:16px}.dm-u-margin--m{margin:24px}.dm-u-margin--l{margin:32px}.dm-u-margin--xl{margin:40px}.dm-u-margin--xxl{margin:48px}.dm-u-marginTop--0{margin-top:0}.dm-u-marginTop--xs{margin-top:8px}.dm-u-marginTop--s{margin-top:16px}.dm-u-marginTop--m{margin-top:24px}.dm-u-marginTop--l{margin-top:32px}.dm-u-marginTop--xl{margin-top:40px}.dm-u-marginTop--xxl{margin-top:48px}.dm-u-marginRight--0{margin-right:0}.dm-u-marginRight--xs{margin-right:8px}.dm-u-marginRight--s{margin-right:16px}.dm-u-marginRight--m{margin-right:24px}.dm-u-marginRight--l{margin-right:32px}.dm-u-marginRight--xl{margin-right:40px}.dm-u-marginRight--xxl{margin-right:48px}.dm-u-marginBottom--0{margin-bottom:0}.dm-u-marginBottom--xs{margin-bottom:8px}.dm-u-marginBottom--s{margin-bottom:16px}.dm-u-marginBottom--m{margin-bottom:24px}.dm-u-marginBottom--l{margin-bottom:32px}.dm-u-marginBottom--xl{margin-bottom:40px}.dm-u-marginBottom--xxl{margin-bottom:48px}.dm-u-marginLeft--0{margin-left:0}.dm-u-marginLeft--xs{margin-left:8px}.dm-u-marginLeft--s{margin-left:16px}.dm-u-marginLeft--m{margin-left:24px}.dm-u-marginLeft--l{margin-left:32px}.dm-u-marginLeft--xl{margin-left:40px}.dm-u-marginLeft--xxl{margin-left:48px}.dm-u-padding--0{padding:0}.dm-u-padding--xs{padding:8px}.dm-u-padding--s{padding:16px}.dm-u-padding--m{padding:24px}.dm-u-padding--l{padding:32px}.dm-u-padding--xl{padding:40px}.dm-u-padding--xxl{padding:48px}.dm-u-paddingTop--0{padding-top:0}.dm-u-paddingTop--xs{padding-top:8px}.dm-u-paddingTop--s{padding-top:16px}.dm-u-paddingTop--m{padding-top:24px}.dm-u-paddingTop--l{padding-top:32px}.dm-u-paddingTop--xl{padding-top:40px}.dm-u-paddingTop--xxl{padding-top:48px}.dm-u-paddingRight--0{padding-right:0}.dm-u-paddingRight--xs{padding-right:8px}.dm-u-paddingRight--s{padding-right:16px}.dm-u-paddingRight--m{padding-right:24px}.dm-u-paddingRight--l{padding-right:32px}.dm-u-paddingRight--xl{padding-right:40px}.dm-u-paddingRight--xxl{padding-right:48px}.dm-u-paddingBottom--0{padding-bottom:0}.dm-u-paddingBottom--xs{padding-bottom:8px}.dm-u-paddingBottom--s{padding-bottom:16px}.dm-u-paddingBottom--m{padding-bottom:24px}.dm-u-paddingBottom--l{padding-bottom:32px}.dm-u-paddingBottom--xl{padding-bottom:40px}.dm-u-paddingBottom--xxl{padding-bottom:48px}.dm-u-paddingLeft--0{padding-left:0}.dm-u-paddingLeft--xs{padding-left:8px}.dm-u-paddingLeft--s{padding-left:16px}.dm-u-paddingLeft--m{padding-left:24px}.dm-u-paddingLeft--l{padding-left:32px}.dm-u-paddingLeft--xl{padding-left:40px}.dm-u-paddingLeft--xxl{padding-left:48px}.dm-u-textIndent--0{text-indent:0}.dm-u-hide{display:none}.dm-u-show,.dm-u-block{display:block}.dm-u-display--block{display:block}.dm-u-display--inlineBlock{display:inline-block}.dm-u-display--inline{display:inline}.dm-u-display--flex{display:flex}.dm-u-pos--absolute{position:absolute}.dm-u-pos--relative{position:relative}.dm-u-pos--static{position:static}.dm-u-pos--fixed{position:fixed}.dm-u-move--offscreen{position:absolute;display:block;left:-99999px}.dm-u-move--onscreen{position:absolute;display:block;left:0}.dm-u-float--left{float:left}.dm-u-float--right{float:right}.dm-u-float--none{float:none}.dm-u-clear--left{clear:left}.dm-u-clear--right{clear:right}.dm-u-clear--both{clear:both}.dm-u-clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.dm-u-opacity--0{opacity:0}.dm-u-phark{display:block;text-indent:-9999px;background-position:0 0;background-repeat:no-repeat;background-color:transparent}.dm-u-bg--none{background:none}.dm-u-boxShadow--none{box-shadow:none}.dm-l-width--100{width:100%}.dm-l-width--75{width:75%}.dm-l-width--66{width:66.66666666667%}.dm-l-width--50{width:50%}.dm-l-width--33{width:33.333333333333%}.dm-l-width--25{width:25%}.dm-l-width--20{width:20%}.dm-l-maxWidth--1000{max-width:1000px}.dm-l-col--100{float:left;width:100%}.dm-l-col--75{float:left;width:75%}.dm-l-col--66{float:left;width:66.66666666667%}.dm-l-col--50{float:left;width:50%}.dm-l-col--33{float:left;width:33.333333333333%}.dm-l-col--25{float:left;width:25%}.dm-l-col--20{float:left;width:20%}@media screen and (min-width: 1248px){.dm-l-articleGrid{display:grid;max-width:1248px;max-width:1404px;max-width:1482px;margin:0 auto;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;align-self:start;grid-template-rows:auto;grid-template-areas:". dm-c-pageHeader dm-c-pageHeader dm-c-pageHeader dm-c-pageHeader dm-c-pageHeader dm-c-pageHeader ." ". . dm-c-articleWell dm-c-articleWell dm-c-articleWell dm-c-articleWell . ." "dm-c-carbonWrap dm-c-carbonWrap dm-c-carbonWrap dm-c-carbonWrap dm-c-carbonWrap dm-c-carbonWrap dm-c-carbonWrap dm-c-carbonWrap"}}@media screen and (min-width: 840px){.dm-l-articleGrid--main{padding-left:10%;padding-right:10%}}@media screen and (min-width: 1248px){.dm-l-articleGrid--main{grid-column:2 / span 6;padding-left:0;padding-right:0}}.dm-l-articleGrid--sidenote{position:fixed;padding:32px;bottom:0;left:0;width:100%;opacity:0;z-index:1}.dm-l-articleGrid--sidenote p{font-size:13px !important;font-family:"BreveNews-BookItalic";font-style:normal}@media screen and (min-width: 1248px){.dm-l-articleGrid--sidenote p{font-size:14px !important}}@media screen and (max-width: 1248px){.dm-l-articleGrid--sidenote p{color:#fff}}@media screen and (max-width: 1248px){.dm-l-articleGrid--sidenote a{color:#fff}}@media screen and (min-width: 1248px){.dm-l-articleGrid--sidenote{position:static;display:block;padding:0;float:right;opacity:1;width:40%;margin-right:-48%;transform:translateY(-12em)}.dm-l-articleGrid--sidenote+h1,.dm-l-articleGrid--sidenote+h2,.dm-l-articleGrid--sidenote+h3,.dm-l-articleGrid--sidenote+h4,.dm-l-articleGrid--sidenote+h5,.dm-l-articleGrid--sidenote+h6,.dm-l-articleGrid--sidenote+img,.dm-l-articleGrid--sidenote+svg{margin-top:24px}}@media screen and (max-width: 1248px){.dm-l-articleGrid--sidenote{background:rgba(62,55,48,0.95)}}body:after{content:'mini';display:none}*{margin:0;padding:0}html{font-size:62.5%}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{font:normal 62.5%/1.5 Georgia,"Times New Roman",serif;color:#343139}body.breveNewsBook-loaded{font-family:"BreveNews-Book",Georgia,"Times New Roman",serif}h1,.h1{font-size:48px;font-size:4.8rem;margin:0 0 0.5em}h2,.h2{font-size:40px;font-size:4rem;margin:0 0 1em;line-height:1.2}h3,.h3{font-size:32px;font-size:3.2rem;margin:0 0 1em}h4,h5,h6,.h4,.h5,.h6{font-size:24px;font-size:2.4rem;margin:0 0 1em}.breveNewsBold-loaded h1,.breveNewsBold-loaded h2,.breveNewsBold-loaded h3,.breveNewsBold-loaded h4,.breveNewsBold-loaded h5,.breveNewsBold-loaded h6{font-weight:normal;font-family:'BreveNews-Bold'}p,ul,dl,ol,table{font-size:16px;font-size:1.6rem;margin:0 0 1.5em}ul,ol{margin-left:24px}form{margin:0 0 1.5em}label{font-size:16px;font-size:1.6rem}input.empty::-webkit-input-placeholder,textarea.empty::-webkit-input-placeholder{color:red}input.empty:-moz-placeholder,textarea.empty:-moz-placeholder{color:red}.error{color:red}table{border-collapse:collapse;width:100%}th,td{padding:0.25em 1em;border-top:1px solid #aaa}td{text-align:right}em,dfn,cite{font-style:italic}.breveNewsBookItalic-loaded em,.breveNewsBookItalic-loaded dfn,.breveNewsBookItalic-loaded cite{font-style:normal;font-family:"BreveNews-BookItalic"}strong{font-weight:bold}.breveNewsBold-loaded strong{font-weight:normal;font-family:"BreveNews-Bold"}mark{background:none;font-style:normal}ins{text-decoration-color:green;text-decoration-style:dotted}video{width:100%;height:auto;max-width:100%}a{color:#343139;text-decoration:none;-webkit-transition:box-shadow 270ms cubic-bezier(0.77, 0, 0.175, 1),color 270ms cubic-bezier(0.77, 0, 0.175, 1);-moz-transition:box-shadow 270ms cubic-bezier(0.77, 0, 0.175, 1),color 270ms cubic-bezier(0.77, 0, 0.175, 1);-o-transition:box-shadow 270ms cubic-bezier(0.77, 0, 0.175, 1),color 270ms cubic-bezier(0.77, 0, 0.175, 1);transition:box-shadow 270ms cubic-bezier(0.77, 0, 0.175, 1),color 270ms cubic-bezier(0.77, 0, 0.175, 1);box-shadow:inset 0 -0.06em 0 #ff6407;box-shadow:inset 0 -0.07em 0 var(--articlePrimaryColor, #ff6407)}a:hover{box-shadow:inset 0 -0.85em 0 var(--articlePrimaryColorHover, #ff6407);color:#000}a:focus{background:#fff;outline:none;background:#ff6407;color:#fff;box-shadow:8px 8px 24px rgba(0,0,0,0.2)}img,svg{display:block;margin:0 10px 10px 0;max-width:100%;height:auto}a img{border:none}i{font-style:normal}b{font-weight:normal}abbr,abbr[title],acronym{border:none;font-size:75%;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none}code,var{font-family:'Source Code Pro', Consolas, 'Courier New', Courier, monospace;font-style:normal;color:#68a3e4;font-size:92%}sub,sup{line-height:0}::selection{background:#ffe400;background:#ff6407;color:#fff}::-moz-selection{background:#ffe400;background:#ff6407;color:#fff}.dm-svg-siteLogo{width:70px}.dm-c-siteNav{margin-bottom:24px;font-family:Helvetica,Arial,sans-serif;font-family:"Firme-Book",Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:0.1em}.dm-c-siteNav ul{list-style:none;text-align:right}@media screen and (min-width: 700px){.dm-c-siteNav ul{margin-top:32px}}.dm-c-siteNav_item{font-size:16px;font-size:1.6rem;text-align:right;font-size:10px;font-size:1rem;margin-bottom:5px}@media screen and (min-width: 700px){.dm-c-siteNav_item{display:inline-block;margin-left:16px;margin-bottom:40px}}@media screen and (min-width: 780px){.dm-c-siteNav_item{margin-left:32px}}.dm-c-siteNav_item a,.dm-c-siteNav_item mark{display:inline-block;background:none;padding:8px}.dm-c-siteNav_item--active a,.dm-c-siteNav_item--active mark{background:#796b5e;color:#fff}.dm-c-preamble{padding:24px;margin-bottom:8px;position:relative;min-height:404px;background:#796b5e}.dm-c-preamble_name{position:absolute;margin-bottom:8px;width:100%;height:350px;top:0;left:0;overflow:hidden}.dm-c-preamble_name--dan,.dm-c-preamble_name--mall{display:block;text-indent:-9999px;background-position:0 0;background-repeat:no-repeat;background-color:transparent;position:absolute;background-size:100%;height:300px;width:300px;z-index:2}.dm-c-preamble_name--dan{background-image:url(/i/dan.svg);top:-20px;left:50%;margin-left:-200px}.dm-c-preamble_name--mall{background-image:url(/i/mall.svg);top:75px;left:50%;margin-left:-160px;width:335px;-webkit-filter:drop-shadow(-8px -8px 24px rgba(0,0,0,0.2));filter:drop-shadow(-8px -8px 24px rgba(0,0,0,0.2))}.dm-c-preamble_dan{position:absolute;display:block;transform:scale(0.7);width:307px;height:432px;background:transparent url(/-/i/dan.png) no-repeat 0 0;left:2px;left:50%;z-index:3;margin-left:-153px;top:23px}.dm-c-preamble_circle{position:absolute;transform:scale(0.7);left:50%;z-index:1;margin-left:-160px;top:117px}.dm-c-preamble_circle_inner{position:relative;display:block;width:321px;height:321px;border-radius:321px;background:#61564b;left:5px}.dm-c-preamble_tagline{font-size:24px;font-size:2.4rem;height:1.3em}.dm-c-preamble_tagline_term{font-family:Helvetica,Arial,sans-serif;font-family:"Firme-Book",Helvetica,Arial,sans-serif;font-weight:normal;display:inline-block;padding:8px;padding-left:16px;padding-right:16px;position:absolute;color:#fff;background:#ff6407;top:320px;left:50%;z-index:5;margin-left:-150px;box-shadow:8px 8px 24px rgba(0,0,0,0.2)}.dm-c-preamble_tagline_term--alt{background:#6ed13d;left:180px;left:50%;top:363px;margin-left:20px;z-index:4}.dm-c-pageHeader{padding:24px}.dm-c-pageHeader:before{display:block;margin-bottom:32px;margin-left:24px;content:"";background:#cac2b8;height:60px;width:3px;margin-top:-50px}.dm-c-pageHeader_title{font-weight:normal;font-size:40px;font-size:4rem;margin-bottom:8px;line-height:1.2}.dm-c-pageHeader_title_count{font-size:24px;font-size:2.4rem;font-family:Helvetica,Arial,sans-serif;font-family:"Firme-Book",Helvetica,Arial,sans-serif;margin-left:8px}.dm-c-pageHeader_date{font-family:Helvetica,Arial,sans-serif;font-family:"Firme-Book",Helvetica,Arial,sans-serif;font-size:16px;font-size:1.6rem;font-weight:normal}@media screen and (min-width: 891px){.dm-c-preamble{margin:24px}.dm-c-preamble_name{width:50%}.dm-c-preamble_dan,.dm-c-preamble_circle,.dm-c-preamble_tagline_term{left:25%}.dm-c-intro{position:absolute;padding-right:40px;font-family:Helvetica,Arial,sans-serif;font-family:"Firme-Book",Helvetica,Arial,sans-serif;top:4em;left:50%;width:45%;color:#fff}.dm-c-intro a{padding:4px;color:#fff}.dm-c-intro a:hover,.dm-c-intro a:focus{background:#ff6407}}@media screen and (min-width: 1020px){padding-top:65px;.dm-c-siteHeader{position:fixed;width:100%;background:rgba(255,255,255,0.93);height:120px;top:-2em;left:0;z-index:1}.dm-svg-siteLogo{padding:0;width:40px}.dm-c-pageHeader_title{position:fixed;top:0.8em;left:112px;z-index:2}.dm-c-pageHeader_title:before{position:absolute;content:"";background:#cac2b8;height:40px;width:2px;left:-0.6em;top:0}.dm-c-pageHeader:before{display:none}}@media screen and (min-width: 1092px){.dm-c-intro p{font-size:20px;font-size:2rem}}@media screen and (min-width: 1020px){.dm-page--articleDetail{padding-top:115px}}@media screen and (min-width: 1020px){.dm-page--articleDetail .dm-c-pageHeader{width:76%}}@media screen and (min-width: 1072px){.dm-page--articleDetail .dm-c-pageHeader{padding-left:10%}}.dm-page--articleDetail .dm-c-pageHeader_title{position:static;line-height:1.2}@media screen and (min-width: 720px){.dm-page--articleDetail .dm-c-pageHeader_title{font-size:48px;font-size:4.8rem}}@media screen and (min-width: 1072px){.dm-page--articleDetail .dm-c-pageHeader_title{font-size:64px;font-size:6.4rem}}.dm-page--articleDetail .dm-c-pageHeader_date{font-family:Helvetica,Arial,sans-serif;font-family:"Firme-Book",Helvetica,Arial,sans-serif;font-size:16px;font-size:1.6rem}@media screen and (min-width: 720px){.dm-page--articleDetail .dm-c-pageHeader_date{font-size:24px;font-size:2.4rem}}@media screen and (min-width: 1020px){.dm-page--landing,.dm-page--articleDetail{padding-top:65px}.dm-page--landing .dm-c-siteHeader,.dm-page--articleDetail .dm-c-siteHeader{position:fixed;width:100%;background:rgba(255,255,255,0.93);height:120px;top:-2em;left:0;z-index:1}.dm-page--landing .dm-svg-siteLogo,.dm-page--articleDetail .dm-svg-siteLogo{padding:0;width:40px}.dm-page--landing .dm-c-pageHeader_title,.dm-page--articleDetail .dm-c-pageHeader_title{position:fixed;top:0.8em;left:112px;z-index:2}.dm-page--landing .dm-c-pageHeader_title:before,.dm-page--articleDetail .dm-c-pageHeader_title:before{position:absolute;content:"";background:#cac2b8;height:40px;width:2px;left:-0.6em;top:0}.dm-page--landing .dm-c-pageHeader:before,.dm-page--articleDetail .dm-c-pageHeader:before{display:none}}@media screen and (min-width: 1020px){.dm-page--articleDetail{padding-top:115px}}@media screen and (min-width: 1020px){.dm-page--articleDetail .dm-c-pageHeader{width:76%}}@media screen and (min-width: 1072px){.dm-page--articleDetail .dm-c-pageHeader{padding-left:10%}}.dm-page--articleDetail .dm-c-pageHeader_title{position:static;line-height:1.2}@media screen and (min-width: 720px){.dm-page--articleDetail .dm-c-pageHeader_title{font-size:48px;font-size:4.8rem}}@media screen and (min-width: 1072px){.dm-page--articleDetail .dm-c-pageHeader_title{font-size:64px;font-size:6.4rem}}.dm-page--articleDetail .dm-c-pageHeader_date{font-family:Helvetica,Arial,sans-serif;font-family:"Firme-Book",Helvetica,Arial,sans-serif;font-size:16px;font-size:1.6rem}@media screen and (min-width: 720px){.dm-page--articleDetail .dm-c-pageHeader_date{font-size:24px;font-size:2.4rem}}
+
+/*# sourceMappingURL=critical.css.map */
+</style>
+    <script>
+        function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],r=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(e){for(var n,o=0;o<r.length;o++)r[o].href&&r[o].href===d.href&&(n=!0);n?e():setTimeout(function(){d.onloadcssdefined(e)})},d.onloadcssdefined(function(){d.media=o||"all"}),d} function cookie(e,i,o){if(void 0===i){var t="; "+window.document.cookie,n=t.split("; "+e+"=");return 2===n.length?n.pop().split(";").shift():null}i===!1&&(o=-1);var r;if(o){var c=new Date;c.setTime(c.getTime()+24*o*60*60*1e3),r="; expires="+c.toGMTString()}else r="";window.document.cookie=e+"="+i+r+"; path=/"} 
+        if( ! cookie( 'full-css' ) ) { 
+            loadCSS( "/-/c/main.css" ); 
+            cookie( 'full-css', true, 7 ); 
+        }
+    </script>
+    <noscript><link rel="stylesheet" href="/-/c/main.1557757274.css" /></noscript>
+
+    
+
+    <!-- Mint -->
+    <script src="http://stats.danielmall.com/mint/?js"></script>   
+
+
+    <!-- Thanks Jeremy! https://adactio.com/journal/9881  -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@danmall" />
+    <meta name="twitter:url" property="og:url" content="http://danmall.me/articles/how-to-scope-work/" />
+    <meta name="twitter:title" property="og:title" content="How to Scope Work" />
+    <meta name="twitter:description" property="og:description" content="A skill that separates the amateurs from the professionals." />
+    <meta name="description" content="A skill that separates the amateurs from the professionals." />
+    <meta name="twitter:image" property="og:image" content="http://danmall.me/articles/how-to-scope-work//thumb.png" />
+
+    <style type="text/css">
+
+        .dm-dp-tableWrapper {
+            overflow-x: scroll;
+        }
+
+        .dm-dp-tableWrapper table {
+            min-width: 440px;
+        }
+
+    </style>
+    
+</head>
+
+
+<body class="dm-page--articleDetail">
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script>
+        document.write('<div class="dm-js-pageShield"></div>');
+    </script>
+
+    <header class="dm-c-siteHeader dm-u-clearfix dm-u-marginBottom--0 dm-u-paddingBottom--0">
+
+	<div class="dm-l-col--33 dm-u-padding--m dm-u-paddingBottom--0 dm-u-marginBottom--0">
+
+		<h1 class="dm-c-siteLogo">
+			<a href="/" class="dm-u-bg--none dm-u-boxShadow--none">
+				<svg class="dm-svg-siteLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 124" aria-labelledby="siteLogo"><defs><style>.siteLogo-fill{fill:#3e3730;}</style></defs><title id="siteLogo">Dan Mall</title><path class="siteLogo-fill" d="M61.52 0h-61.52v26.57h4.24c1.76 0 4.76 3.01 4.76 4.78v62.18c0 1.77-3 4.78-4.77 4.78h-4.23v25.69h60.11c50.38 0 70.89-22 70.89-63.06s-19.8-60.94-69.48-60.94zm4.78 82.26c-4.43 4.87-8 10.06-12.23 14.38-1.79 1.82-3.86 4.61-6.34 3.85l-.54-1.28c.85-2.49 3.48-3.95 5.11-5.38l3.62-4c2.08-2 4.33-3.57 6.45-6 2.89-3.35 4.73-7.88 5.89-11.52l1.74-3.91c2.66-9.78 2.66-18.83-1.51-26.72h-.17c.25 1.29 1.29 2.74 1.39 4 .59 7.54.09 17.8-3 26.12-.79 2.12-3.8 9.87-5.91 10.81l-.83.23c-2.21-1.77-2-8-2.28-10.65-1.22-11.55 1.69-24.42.67-36.12-.36-4.4-2.7-14.07-9.45-11.27-4.32 1.77-2.24 6.49-4.05 8.49-1.4 1.56-3.75 2.15-5.38 3.13l-.64-.36c1.08-1.54 3-2.33 4.33-4 1-1.28.75-2.52 1-3.61a10.42 10.42 0 0 1 7.36-6.91c6.41-1.43 14.64 9.16 17.47 12.57 11.32 13.89 13 30.89-2.7 48.15zm-17.3-53.84a2.14 2.14 0 1 1 .83 2.92 2.14 2.14 0 0 1-.83-2.92z"/></svg>
+			</a>
+		</h1>
+
+	</div>
+
+	<div class="dm-l-col--66 dm-u-padding--m dm-u-paddingBottom--0 dm-u-paddingLeft--0">
+
+		<a class="dm-dp-vertSepNav_trigger dm-u-move--offscreen" href="#nav">Skip to navigation</a>
+
+<nav id="nav" class="dm-c-siteNav">
+
+	<ul>
+		
+
+		
+
+
+			        	        <li class="dm-c-siteNav_item dm-c-siteNav_item--active">
+	        	<a href="/articles/">Articles</a>
+	        </li>
+	        		
+
+
+				<li class="dm-c-siteNav_item">
+			<a href="/speaking-podcasts/">Speaking &amp; Podcasts</a>
+		</li>
+		
+
+				<li class="dm-c-siteNav_item">
+			<a href="/blogroll/">Blogroll</a>
+		</li>
+				
+		
+
+
+				<li class="dm-c-siteNav_item">
+			<a href="/contact/">Contact</a>
+		</li>
+		
+
+
+	</ul>
+
+</nav>
+
+
+	</div>
+
+</header>
+
+
+    <div class="dm-l-articleGrid">
+
+        <header class="dm-c-pageHeader dm-l-articleGrid--main" role="banner">
+
+            <h1 class="dm-c-pageHeader_title">
+                How to Scope Work
+            </h1>
+
+            <h2 class="dm-c-pageHeader_date">December 23, 2017 at 9:31 <abbr title="Ante Meridien">AM</abbr></h2>
+
+        </header><!-- .page-header -->
+
+        <main role="main" class="dm-c-articleWell">
+
+            <div class="dm-dp-textPassage dm-l-articleGrid--main">
+
+                <p><span class="dm-dp-openingLines">After four days</span> of working together, she finally admitted, &ldquo;No one ever taught me how to scope.&rdquo; I was working with one of my clients&rsquo; senior developers to map out exactly how we were going to get all of the work done that we needed, but a few frustrating hours of going in circles finally revealed the culprit. It&rsquo;s a problem I&rsquo;ve seen from very junior to some of the most senior employees I&rsquo;ve worked with.</p>
+
+                <div class="dm-c-carbonWrap">
+                    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=danielmallcom" id="_carbonads_js"></script>
+                </div><!-- .dm-c-carbonWrap -->
+
+                <p>Simply put, I like to define <dfn>scope</dfn> as:</p>
+                <ol>
+                    <li>A description of all the work that needs to get done, and</li>
+                    <li>The time needed to do said work.</li> 
+                </ol>
+
+                <p>That can be as simple as building a website in 5 days or as complex as organizing an entire ad campaign. Regardless, the formula remains intact.</p>
+
+                <p>Good scoping is often a case of simple arithmetic; by the time you were 8 or 9 years old, you&rsquo;ve had the skills to scope well. So why is it so difficult? You&rsquo;re mostly fighting the psychology of it all.</p>
+
+                <p>If I asked you if you could build a website (of any given complexity) in 6 months, I&rsquo;d bet your answer would be, &ldquo;Probably.&rdquo; That&rsquo;s the <a href="https://en.wikipedia.org/wiki/Valence_effect">valence effect</a> at play: your tendency to think that more good will happen to you than bad. Throw a little <a href="https://en.wikipedia.org/wiki/Parkinson%27s_law">Parkinson&rsquo;s law</a> in there (the adage that work expands to fill the time available for its completion) and that explains why you&rsquo;ve taken way longer on every project than you should have&mdash;and felt good about it to boot. The reality is closer to <a href="https://en.wikipedia.org/wiki/Hofstadter%27s_law">Hofstadter&rsquo;s law</a>: it always takes longer than you expect (even when you take into account Hofstadter&rsquo;s law). Rather than relying on gut feelings, we can use math to figure out if you&rsquo;ll meet your deadlines.</p>
+
+                <h2 id="budgeting">Budgeting time <a class="dm-dp-anchorLink" href="#budgeting-time">#</a></h2>
+
+                <p>If you&rsquo;re like most people (and like me), it&rsquo;s difficult to save money. Let&rsquo;s say you&rsquo;re trying to save $6,000 for a vacation next year. That&rsquo;s a daunting task at first glance, but it becomes easier when you break it down. Instead of looking at it as $6k, look at it as $500/month ($6,000 &divide; 12 months). Or maybe it&rsquo;s $125/week ($500 &divide; 4 weeks). Or $25/day ($125 &divide; 5 days). When you look at it that way, for every day you go to work, skip your Starbucks coffee, pack a lunch, throw that $25 in a jar, and watch that vacation happen in no time. By breaking it down into digestible chunks, it&rsquo;s much more manageable!</p>
+
+                <p>If it helps, think of scoping like a budget for your time.</p>
+
+                <h2 id="building-in-5-days">Building a website in 5 days <a class="dm-dp-anchorLink" href="#building-in-5-days">#</a></h2>
+
+                <p>Let&rsquo;s take the simple example from earlier: building a website in 5 days. If it&rsquo;s a 5-page website, our basic math skills (5 pages &divide; 5 days) tell us that we need to average building about 1 page per day. So far, our workload would look like this:</p>
+
+                <div class="dm-dp-tableWrapper">
+                    <table class="dm-u-marginTop--l">
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th scope="col" class="dm-u-font--bold">Workload</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="dm-u-align--left dm-u-font--bold">Monday</th>
+                                <td class="dm-u-align--center">1 page</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="dm-u-align--left dm-u-font--bold">Tuesday</th>
+                                <td class="dm-u-align--center">1 page</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="dm-u-align--left dm-u-font--bold">Wednesday</th>
+                                <td class="dm-u-align--center">1 page</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="dm-u-align--left dm-u-font--bold">Thursday</th>
+                                <td class="dm-u-align--center">1 page</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="dm-u-align--left dm-u-font--bold">Friday</th>
+                                <td class="dm-u-align--center">1 page</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>But we can break that down even further, because building a page has three components to it: <abbr title="HyperText Marktup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JavaScript. So, let&rsquo;s divide a typical 9am&ndash;5pm workday into four parts (because lunch is incredibly important too, kids):</p>
+
+                <div class="dm-dp-tableWrapper">
+                    <table class="dm-u-marginTop--l">
+                        <tbody>
+                            <tr>
+                                <th rowspan="5" scope="row" class="dm-u-align--left dm-u-font--bold">Monday</th>
+                                <td colspan="2" class="dm-u-align--center">Page 1</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">HTML</td>
+                                <td class="dm-u-align--center">9:00am&ndash;11:00am</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">CSS</td>
+                                <td class="dm-u-align--center">11:00am&ndash;1:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">Lunch</td>
+                                <td class="dm-u-align--center">1:00pm&ndash;2:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">JavaScript</td>
+                                <td class="dm-u-align--center">2:00pm&ndash;5:00pm</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="5" scope="row" class="dm-u-align--left dm-u-font--bold">Tuesday</th>
+                                <td colspan="2" class="dm-u-align--center">Page 2</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">HTML</td>
+                                <td class="dm-u-align--center">9:00am&ndash;11:00am</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">CSS</td>
+                                <td class="dm-u-align--center">11:00am&ndash;1:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">Lunch</td>
+                                <td class="dm-u-align--center">1:00pm&ndash;2:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">JavaScript</td>
+                                <td class="dm-u-align--center">2:00pm&ndash;5:00pm</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="5" scope="row" class="dm-u-align--left dm-u-font--bold">Wednesday</th>
+                                <td colspan="2" class="dm-u-align--center">Page 3</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">HTML</td>
+                                <td class="dm-u-align--center">9:00am&ndash;11:00am</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">CSS</td>
+                                <td class="dm-u-align--center">11:00am&ndash;1:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">Lunch</td>
+                                <td class="dm-u-align--center">1:00pm&ndash;2:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">JavaScript</td>
+                                <td class="dm-u-align--center">2:00pm&ndash;5:00pm</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="5" scope="row" class="dm-u-align--left dm-u-font--bold">Thursday</th>
+                                <td colspan="2" class="dm-u-align--center">Page 4</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">HTML</td>
+                                <td class="dm-u-align--center">9:00am&ndash;11:00am</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">CSS</td>
+                                <td class="dm-u-align--center">11:00am&ndash;1:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">Lunch</td>
+                                <td class="dm-u-align--center">1:00pm&ndash;2:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">JavaScript</td>
+                                <td class="dm-u-align--center">2:00pm&ndash;5:00pm</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="5" scope="row" class="dm-u-align--left dm-u-font--bold">Friday</th>
+                                <td colspan="2" class="dm-u-align--center">Page 5</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">HTML</td>
+                                <td class="dm-u-align--center">9:00am&ndash;11:00am</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">CSS</td>
+                                <td class="dm-u-align--center">11:00am&ndash;1:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">Lunch</td>
+                                <td class="dm-u-align--center">1:00pm&ndash;2:00pm</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">JavaScript</td>
+                                <td class="dm-u-align--center">2:00pm&ndash;5:00pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>This is much better! The specificity here can help to assess if this is a realistic plan. But we can break it down even further.</p>
+
+                <p>Let&rsquo;s say the first page has 4 different sections. We can average the time to write the markup for each section, for example:</p>
+
+                <div class="dm-dp-tableWrapper">
+                    <table class="dm-u-marginTop--l">
+                        <tbody>
+                            <tr>
+                                <th rowspan="9" scope="row" class="dm-u-align--left dm-u-font--bold">Monday</th>
+                                <td colspan="3" class="dm-u-align--center">Page 1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4" class="dm-u-align--center">HTML</td>
+                                <td class="dm-u-align--center">Section 1</td>
+                                <td class="dm-u-align--center">9:00am&ndash;9:30am</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">Section 2</td>
+                                <td class="dm-u-align--center">9:30am&ndash;10:00am</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">Section 3</td>
+                                <td class="dm-u-align--center">10:00am&ndash;10:30am</td>
+                            </tr>
+                            <tr>
+                                <td class="dm-u-align--center">Section 4</td>
+                                <td class="dm-u-align--center">10:30am&ndash;11:00am</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="dm-u-align--center">CSS</td>
+                                <td class="dm-u-align--center">11:00am&ndash;1:00pm</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="dm-u-align--center">Lunch</td>
+                                <td class="dm-u-align--center">1:00pm&ndash;2:00pm</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="dm-u-align--center">JavaScript</td>
+                                <td class="dm-u-align--center">2:00pm&ndash;5:00pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>You can continue to break down each task further if it&rsquo;s useful to do so, but, even at this level, you can realistically assess the work. Can you write a section of <abbr>HTML</abbr> in 30 minutes? If yes, great! You&rsquo;re on schedule and will make your timeline. If not, what can you adjust or reorder to make it work?</p>
+
+                <p>Herein lies the real beauty of this technique: <strong>you&rsquo;ll know when you&rsquo;re in danger of missing a deadline days, weeks, or even months in advance.</strong> For example, if you haven&rsquo;t completed Section 3 of Page 1&rsquo;s <abbr>HTML</abbr> by Monday at 10:30am, you&rsquo;re going to miss your deadline. Sure, it&rsquo;s possible that you may make up the time later on, but if you&rsquo;ve estimated realistically and remember Hofstadter&rsquo;s law, now&mdash;4 days in advance&mdash;is a good time to ask your client or manager for an extra day, just in case.</p>
+
+                <p>Scoping is about appropriately setting expectations for yourself, your team, and your clients and managers. It&rsquo;s a rare skill that separates the amateurs from the professionals. Which one are you?</p>
+
+            </div>
+
+            <section id="up-next" class="dm-c-upNext">
+
+                <h1 class="dm-c-upNext_kicker">Up Next</h1>
+
+                <h2 class="dm-c-upNext_title">
+                    <a href="/articles/stealing-your-way-to-original-designs/">
+                        Stealing Your Way to Original <span class="dm-c-upNext_title_lastWord">Designs</span>
+                    </a>
+                </h2>
+
+            </section><!-- .dm-c-upNext -->
+
+        </main>
+
+    </div><!-- .dm-l-articleGrid -->
+
+
+
+    <section id="comments" class="dm-c-comments">      
+            
+        <div class="main">
+            
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+                
+                var disqus_config = function () {
+                    this.page.url = 'http://danmall.me/articles/how-to-scope-work';
+                    this.page.identifier = 'how-to-scope-work';
+                    //this.page.title = 'a unique title for each page where Disqus is present';
+                };
+                
+                (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = '//danielmall.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            
+        </div><!-- /.main -->
+        
+            
+    </section><!-- #comments -->
+
+    
+<footer role="complementary" class="dm-c-siteFooter">
+
+	<div class="dm-c-siteFooter_copyright">
+		<p>&copy; 2005 &ndash; 2020 Dan Mall, a Philly jawn.Thou shalt not <a href="/articles/stealing-your-way-to-original-designs/">steal</a>.</p>
+		<p>Powered by Hand Coding&trade;. Check out this site&rsquo;s code on <a href="https://github.com/danmall/danmallme" rel="me">Github</a>.</p>
+		<p>RSS: <a href="/rss/full.xml">Full posts</a>. <a href="/rss/">Excerpts</a>.</p>
+		<p>Graciously hosted by <a href="https://www.mediatemple.net/go/order/?refdom=danielmall.com">Media Temple</a></p>
+			</div>
+
+	<div class="dm-c-siteFooter_twitter">
+		<script>
+		document.write('<section id="twitter-follow"><a rel="me" href="http://twitter.com/danmall" class="twitter-follow-button">Follow @danmall</a></section>');    	
+		</script>
+		<noscript><p><a rel="me" href="http://twitter.com/danmall" class="twitter-follow-button">Follow @danmall</a></p></noscript>
+		<script src="https://platform.twitter.com/widgets.js"></script>
+	</div>
+	
+</footer>
+
+    
+
+<script src="/-/j/danmall.1536939117.js"></script>
+        
+
+</body>
+</html>
+
+    
