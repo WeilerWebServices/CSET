@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>CSET</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2020-12-01T07:04:54-05:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Zach Fedor</name>
+   <email>fedor@stevenscollege.edu</email>
+ </author>
+
+ 
+ <entry>
+   <title>Fall 2020 Update</title>
+   <link href="http://localhost:4000/2020/08/01/fall-2020/"/>
+   <updated>2020-08-01T00:00:00-04:00</updated>
+   <id>http://localhost:4000/2020/08/01/fall-2020</id>
+   <content type="html">&lt;p&gt;The college has announced their &lt;a href=&quot;https://stevenscollege.edu/fall-2020/&quot;&gt;re-opening plan for the fall semester&lt;/a&gt;. CSET and six other programs will be fully remote, including gen-ed classes. Our program will be one of the easiest to convert to an online-only setup, but it will still take some time to iron out any kinks.&lt;/p&gt;
+
+&lt;p&gt;The college will post announcements or changes to the plan at that website. Be sure to check your college email account for updates as well.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>
